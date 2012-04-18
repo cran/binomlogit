@@ -1,0 +1,12 @@
+import("stats", "graphics")
+
+export(
+  "dRUMIndMH",
+  "dRUMAuxMix",
+  "dRUMHAM",
+  "IndivdRUMIndMH"
+)
+
+S3method("print", "binomlogit")
+S3method("summary", "binomlogit")
+S3method("plot", "binomlogit")
