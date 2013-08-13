@@ -28,7 +28,7 @@ IndivdRUMIndMH(y, X, sim = 12000, burn = 2000, acc = 0, b0, B0, start,
   \item{verbose}{an optional non-negative integer indicating that in each \code{verbose}-th iteration step a status report is printed (default: \code{verbose = 500}). If 0, no output is generated during MCMC sampling.
 }
 }
-\details{For details concerning the algorithm see the papers by Fussl, Fruehwirth-Schnatter and Fruehwirth (2012) and Fruehwirth-Schnatter and Fruehwirth (2010).
+\details{For details concerning the algorithm see the papers by Fussl, Fruehwirth-Schnatter and Fruehwirth (2013) and Fruehwirth-Schnatter and Fruehwirth (2010).
 }
 \value{
 The output is a list object of class \code{c("binomlogitIndiv","binomlogitMH","binomlogit")} containing
@@ -47,8 +47,8 @@ The output is a list object of class \code{c("binomlogitIndiv","binomlogitMH","b
 To display the output use \code{print}, \code{summary} and \code{plot}. The \code{print} method prints the number of observations and covariates entered in the routine, the total number of MCMC draws (including burn-in), the number of draws discarded as burn-in, the runtime used for the whole algorithm and for the \code{sim-burn} MCMC draws after burn-in and the acceptance rate. The \code{summary} method additionally returns the length of the acceptance phase during burn-in, the used prior parameters \code{b0} and \code{B0} and the posterior mean for the regression coefficients without burn-in. The \code{plot} method plots the MCMC draws and their acf for each regression coefficient, both without burn-in.
 }
 \references{
-Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2012), 
-"Efficient MCMC for Binomial Logit Models". \emph{currently under revision}.
+Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
+"Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 
 Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2010),
 "Data augmentation and MCMC for binary and multinomial logit models."

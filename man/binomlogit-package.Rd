@@ -12,8 +12,8 @@ The R package contains different MCMC schemes to estimate the regression coeffic
 \tabular{ll}{
 Package: \tab binomlogit\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-04-18\cr
+Version: \tab 1.1\cr
+Date: \tab 2013-08-13\cr
 License: \tab GPL-3\cr
 }
 The main functions are \code{\link{dRUMIndMH}} for independence Metropolis-Hastings sampling, \code{\link{dRUMAuxMix}} for auxiliary mixture sampling and \code{\link{dRUMHAM}} for hybrid auxiliary mixture sampling in the dRUM representation of a binomial logit model. The function \code{\link{IndivdRUMIndMH}} is designed to work with binary instead of binomial observations to estimate the regression coefficients of a logit model. All four functions simulate the posterior distribution of the regression coefficients of the logit model and return the MCMC draws. For more details about the models and the estimation procedures see \bold{References}. The results are returned in a list of class "binomlogit"" and can be displayed by using the functions \code{print} and \code{summary}. The \code{plot} method returns a plot of the MCMC draws and the acf.
@@ -25,8 +25,8 @@ Agnes Fussl
 Maintainer: Agnes Fussl <agnes.fussl@jku.at>
 }
 \references{
-Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2012), 
-"Efficient MCMC for Binomial Logit Models". \emph{currently under revision}.
+Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
+"Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 
 Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2010),
 "Data augmentation and MCMC for binary and multinomial logit models."
@@ -37,7 +37,7 @@ of Ludwig Fahrmeir}, T. Kneib and G. Tutz, Eds. Physica-Verlag, Heidelberg, pp. 
 \keyword{regression}
 \seealso{\code{\link{dRUMIndMH}}, \code{\link{dRUMAuxMix}}, \code{\link{dRUMHAM}}, \code{\link{IndivdRUMIndMH}}
 
-To evaluate the efficiency of the different MCMC samplers as in the paper by Fussl, Fruehwirth-Schnatter and Fruehwirth (2012), use e.g. the initial sequence estimator \code{\link[mcmc]{initseq}} by Geyer (package \pkg{mcmc}), the \code{\link[bayesm]{numEff}} function by Rossi (package \pkg{bayesm}) or the appropriate functions of the \pkg{coda} package by Plummer, Best, Cowles and Vines.
+To evaluate the efficiency of the different MCMC samplers as in the paper by Fussl, Fruehwirth-Schnatter and Fruehwirth (2013), use e.g. the initial sequence estimator \code{\link[mcmc]{initseq}} by Geyer (package \pkg{mcmc}), the \code{\link[bayesm]{numEff}} function by Rossi (package \pkg{bayesm}) or the appropriate functions of the \pkg{coda} package by Plummer, Best, Cowles and Vines.
 }
 
 \examples{

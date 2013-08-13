@@ -32,7 +32,7 @@ dRUMHAM(yi, Ni, X, sim = 12000, burn = 2000, b0, B0, start,
   \item{verbose}{an optional non-negative integer indicating that in each \code{verbose}-th iteration step a status report is printed (default: \code{verbose = 500}). If 0, no output is generated during MCMC sampling.
 }
 }
-\details{For details concerning the algorithm see the paper by Fussl, Fruehwirth-Schnatter and Fruehwirth (2012).
+\details{For details concerning the algorithm see the paper by Fussl, Fruehwirth-Schnatter and Fruehwirth (2013).
 }
 \value{
 The output is a list object of class \code{c("binomlogitHAM","binomlogit")} containing
@@ -52,8 +52,8 @@ The output is a list object of class \code{c("binomlogitHAM","binomlogit")} cont
 To display the output use \code{print}, \code{summary} and \code{plot}. The \code{print} method prints the number of observations and covariates entered in the routine, the total number of MCMC draws (including burn-in), the number of draws discarded as burn-in, the runtime used for the whole algorithm and for the \code{sim-burn} MCMC draws after burn-in and the acceptance rate. The \code{summary} method additionally returns the boundaries \code{low} and \code{up} used for HAM sampling, the prior parameters \code{b0} and \code{B0} and the posterior mean for the regression coefficients without burn-in. The \code{plot} method plots the MCMC draws and their acf for each regression coefficient, both without burn-in.
 }
 \references{
-Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2012), 
-"Efficient MCMC for Binomial Logit Models". \emph{currently under revision}.
+Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
+"Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 }
 \author{Agnes Fussl <agnes.fussl@jku.at>
 }
@@ -71,7 +71,9 @@ X <- as.matrix(caesarean[,-(1:2)])
 
 ## start HAM sampler
 ham1 <- dRUMHAM(yi,Ni,X)
+\dontrun{
 ham2 <- dRUMHAM(yi,Ni,X,low=0.01,up=0.99)
+}
 
 print(ham1)
 summary(ham1)
