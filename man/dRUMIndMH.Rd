@@ -8,8 +8,8 @@
 \description{\code{dRUMIndMH} simulates the posterior distribution of the regression coefficients of a binomial logit model and returns the MCMC draws. The sampling procedure is based on an algorithm using data augmentation, where the regression coefficients are estimated by rewriting the binomial logit model as a latent variable model called difference random utility model (dRUM). The Type III generalized logistic distribution of the error in the dRUM representation is approximated by a normal distribution with same mean and variance. The posterior of this approximate regression model is then used as independence proposal density for the regression coefficients.
 }
 \usage{
-dRUMIndMH(yi, Ni, X, sim = 12000, burn = 2000, acc = 0, b0, B0, start,
-          verbose = 500)
+dRUMIndMH(yi, Ni, X, sim = 12000, burn = 2000, acc = 0, b0, B0, 
+          start, verbose = 500)
 }
 \arguments{
   \item{yi}{an integer vector of counts for binomial data.
@@ -55,7 +55,7 @@ To display the output use \code{print}, \code{summary} and \code{plot}. The \cod
 Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
 "Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 }
-\author{Agnes Fussl <agnes.fussl@jku.at>
+\author{Agnes Fussl <avf@gmx.at>
 }
 \note{\code{dRUMIndMH} could also be used to estimate the regression coefficients in the individual dRUM representation of the binomial logit model (analogous to \code{\link{dRUMAuxMix}}). However, it is more straightforward to use \code{\link{IndivdRUMIndMH}}, where binary observations can directly be used as input.
 }
@@ -85,8 +85,8 @@ yi <- as.numeric(simul[,1])
 Ni <- as.numeric(simul[,2])                           
 X <- as.matrix(simul[,-(1:2)])
 
-## use a small acc>0 (e.g. acc=50), otherwise the sampler gets stuck at the starting
-## values
+## use a small acc>0 (e.g. acc=50), otherwise the sampler gets stuck at
+## the starting values
 mh2 <- dRUMIndMH(yi,Ni,X,acc=50)
 
 print(mh2)

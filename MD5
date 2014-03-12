@@ -1,4 +1,4 @@
-b89f511c61e81df92e9065ddce8d3287 *DESCRIPTION
+777524392dad89bbc8e1957539e45992 *DESCRIPTION
 1105e351fc2b3f5503acea479070e112 *NAMESPACE
 32cb2b212365be1afac4df953e93a96d *R/IndivdRUMIndMH.R
 30c355722771d87071a4fe428bcb1302 *R/compmix.R
@@ -13,10 +13,10 @@ dabbe067c9f9c7d152fa6f0c4b924356 *R/dRUMIndMH.R
 fa1dc5a7878e94716f788d9e1d702503 *data/caesarean_binary.rda
 db2aa064ca28235127d555f8ade9bc4a *data/simul.rda
 1febfac02e6ad73a2fb903f56fc24798 *data/simul_binary.rda
-f62d42244c3abbb120f6033fefec3db4 *man/IndivdRUMIndMH.Rd
-92e611c8986332eaa51daf419fce10ec *man/binomlogit-package.Rd
-6dea45f573ed86f3c01d52d5fac989ba *man/caesarean.Rd
-1e310a4aeb7428a45f2e5eefa9c93b24 *man/dRUMAuxMix.Rd
-70906c68bd4fa4ee88ece8dcc7e1f6b9 *man/dRUMHAM.Rd
-d6f3fc80e16cacf99a8d00d3c8b44053 *man/dRUMIndMH.Rd
-6987b3deca460cd8ca3ac59e2e96155f *man/simul.Rd
+ba444262376d7b7426f188a66e3a29bb *man/IndivdRUMIndMH.Rd
+28776861538d8fe5c891ec02187ad7ee *man/binomlogit-package.Rd
+ec04ecab516da789729c3ef33d89364f *man/caesarean.Rd
+dda87d71d946fbfaab0d523407e10678 *man/dRUMAuxMix.Rd
+93e1f2f32ae72774effdbc06a6306bc7 *man/dRUMHAM.Rd
+c4932f87ae7d534df5db05d8ee22afc1 *man/dRUMIndMH.Rd
+d9a7d046604adb8d19d0adced63585d7 *man/simul.Rd

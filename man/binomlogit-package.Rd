@@ -13,16 +13,16 @@ The R package contains different MCMC schemes to estimate the regression coeffic
 Package: \tab binomlogit\cr
 Type: \tab Package\cr
 Version: \tab 1.1\cr
-Date: \tab 2013-08-13\cr
+Date: \tab 2014-03-12\cr
 License: \tab GPL-3\cr
 }
-The main functions are \code{\link{dRUMIndMH}} for independence Metropolis-Hastings sampling, \code{\link{dRUMAuxMix}} for auxiliary mixture sampling and \code{\link{dRUMHAM}} for hybrid auxiliary mixture sampling in the dRUM representation of a binomial logit model. The function \code{\link{IndivdRUMIndMH}} is designed to work with binary instead of binomial observations to estimate the regression coefficients of a logit model. All four functions simulate the posterior distribution of the regression coefficients of the logit model and return the MCMC draws. For more details about the models and the estimation procedures see \bold{References}. The results are returned in a list of class "binomlogit"" and can be displayed by using the functions \code{print} and \code{summary}. The \code{plot} method returns a plot of the MCMC draws and the acf.
+The main functions are \code{\link{dRUMIndMH}} for independence Metropolis-Hastings sampling, \code{\link{dRUMHAM}} for hybrid auxiliary mixture sampling and \code{\link{dRUMAuxMix}} for auxiliary mixture sampling in the dRUM representation of a binomial logit model. The function \code{\link{IndivdRUMIndMH}} is designed to work with binary instead of binomial observations to estimate the regression coefficients of a logit model. All four functions simulate the posterior distribution of the regression coefficients of the logit model and return the MCMC draws. For more details about the models and the estimation procedures see \bold{References}. The results are returned in a list of class "binomlogit"" and can be displayed by using the functions \code{print} and \code{summary}. The \code{plot} method returns a plot of the MCMC draws and the acf.
 The Caesarean birth data set (\code{\link{caesarean}}) is provided in three different formats to serve as exemplary input for the different MCMC schemes.
 }
 \author{
 Agnes Fussl
 
-Maintainer: Agnes Fussl <agnes.fussl@jku.at>
+Maintainer: Agnes Fussl <avf@gmx.at>
 }
 \references{
 Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
@@ -41,5 +41,6 @@ To evaluate the efficiency of the different MCMC samplers as in the paper by Fus
 }
 
 \examples{
-# please run the examples in dRUMIndMH, dRUMAuxMix, dRUMHAM and IndivdRUMIndMH
+# please run the examples in:
+# dRUMIndMH, dRUMAuxMix, dRUMHAM and IndivdRUMIndMH
 }

@@ -57,7 +57,7 @@ Fahrmeir, L. and Tutz, G. (2001) \emph{Multivariate Statistical Modelling based 
   data(caesarean)
   data(caesarean_binary)
   data(caesarean_aux)
-  ## see dRUMIndMH, dRUMAuxMix, dRUMHAM and IndivdRUMIndMH documentation for examples
-  ## using these data
+  ## see dRUMIndMH, dRUMAuxMix, dRUMHAM and IndivdRUMIndMH documentation
+  ## for examples using these data
 }
 \keyword{datasets}

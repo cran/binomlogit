@@ -6,7 +6,7 @@
 }
 \usage{
 dRUMHAM(yi, Ni, X, sim = 12000, burn = 2000, b0, B0, start,
-       low = 0.05, up = 0.95, verbose = 500)
+        low = 0.05, up = 0.95, verbose = 500)
 }
 \arguments{
   \item{yi}{an integer vector of counts for binomial data.
@@ -55,13 +55,13 @@ To display the output use \code{print}, \code{summary} and \code{plot}. The \cod
 Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
 "Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 }
-\author{Agnes Fussl <agnes.fussl@jku.at>
+\author{Agnes Fussl <avf@gmx.at>
 }
 \seealso{\code{\link{dRUMIndMH}}, \code{\link{dRUMAuxMix}}, \code{\link{IndivdRUMIndMH}}
 }
 \examples{
-## Hybrid auxiliary mixture sampling in the aggregated dRUM representation of a 
-## binomial logit model
+## Hybrid auxiliary mixture sampling in the aggregated dRUM representation  
+## of a binomial logit model
 
 ## load caesarean birth data
 data(caesarean)

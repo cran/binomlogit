@@ -5,8 +5,8 @@
 \description{\code{IndivdRUMIndMH} simulates the posterior distribution of the regression coefficients of a binary logit model and returns the MCMC draws. The sampling procedure is based on an algorithm using data augmentation, where the regression coefficients are estimated by rewriting the binary logit model as a latent variable model called difference random utility model (dRUM). This dRUM representation of the binary logit model is equivalent to the individual dRUM representation of the binomial logit model. The logistic distribution of the error in the dRUM representation is approximated by a normal distribution with same mean and variance. The posterior of this approximate regression model is then used as independence proposal density for the regression coefficients.
 }
 \usage{
-IndivdRUMIndMH(y, X, sim = 12000, burn = 2000, acc = 0, b0, B0, start,
-               verbose = 500)
+IndivdRUMIndMH(y, X, sim = 12000, burn = 2000, acc = 0, b0, B0, 
+               start, verbose = 500)
 }
 \arguments{
   \item{y}{logical or coercible to integer with values 0 and 1 (Bernoulli data).
@@ -31,7 +31,8 @@ IndivdRUMIndMH(y, X, sim = 12000, burn = 2000, acc = 0, b0, B0, start,
 \details{For details concerning the algorithm see the papers by Fussl, Fruehwirth-Schnatter and Fruehwirth (2013) and Fruehwirth-Schnatter and Fruehwirth (2010).
 }
 \value{
-The output is a list object of class \code{c("binomlogitIndiv","binomlogitMH","binomlogit")} containing
+The output is a list object of class \code{c("binomlogitIndiv","binomlogitMH",}
+\code{"binomlogit")} containing
 \item{beta}{a \code{dims x sim} matrix of sampled regression coefficients from the posterior distribution}
 \item{sim}{the argument \code{sim}}
 \item{burn}{the argument \code{burn}}
@@ -55,14 +56,15 @@ Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2010),
 In \emph{Statistical Modelling and Regression Structures - Festschrift in Honour
 of Ludwig Fahrmeir}, T. Kneib and G. Tutz, Eds. Physica-Verlag, Heidelberg, pp. 111-132.
 }
-\author{Agnes Fussl <agnes.fussl@jku.at>
+\author{Agnes Fussl <avf@gmx.at>
 }
 \note{To perform auxiliary mixture sampling for the binary logit model use \code{\link{dRUMAuxMix}} and follow the instructions given there.
 }
 \seealso{\code{\link{dRUMIndMH}}, \code{\link{dRUMAuxMix}}, \code{\link{dRUMHAM}}
 }
 \examples{
-## Data-augmented independence Metropolis-Hastings sampling for the binary logit model
+## Data-augmented independence Metropolis-Hastings sampling for the
+## binary logit model
 
 ## load caesarean birth data
 data(caesarean_binary)
@@ -82,8 +84,8 @@ data(simul_binary)
 y <- as.numeric(simul_binary[,1])                                           
 X <- as.matrix(simul_binary[,-1])
 
-## use a small acc>0 (e.g. acc=50), otherwise the sampler gets stuck at the starting
-## values
+## use a small acc>0 (e.g. acc=50), otherwise the sampler gets stuck at
+## the starting values
 indivMH2 <- IndivdRUMIndMH(y,X,acc=50)
 
 print(indivMH2)

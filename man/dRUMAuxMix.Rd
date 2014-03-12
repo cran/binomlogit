@@ -5,7 +5,8 @@
 \description{\code{dRUMAuxMix} simulates the posterior distribution of the regression coefficients of a binomial logit model and returns the MCMC draws. The sampling procedure is based on an algorithm using data augmentation, where the regression coefficients are estimated by rewriting the binomial logit model as a latent variable model called difference random utility model (dRUM). The Type III generalized logistic distribution of the error in this dRUM representation is approximated by a scale mixture of normal distributions.
 }
 \usage{
-dRUMAuxMix(yi, Ni, X, sim = 12000, burn = 2000, b0, B0, start, verbose = 500)
+dRUMAuxMix(yi, Ni, X, sim = 12000, burn = 2000, b0, B0,
+           start, verbose = 500)
 }
 \arguments{
   \item{yi}{an integer vector of counts for binomial data.
@@ -48,7 +49,7 @@ To display the output use \code{print}, \code{summary} and \code{plot}. The \cod
 Agnes Fussl, Sylvia Fruehwirth-Schnatter and Rudolf Fruehwirth (2013), 
 "Efficient MCMC for Binomial Logit Models". \emph{ACM Transactions on Modeling and Computer Simulation 23}, 1, Article 3, 21 pages.
 }
-\author{Agnes Fussl <agnes.fussl@jku.at>
+\author{Agnes Fussl <avf@gmx.at>
 }
 \note{
 \code{dRUMAuxMix} can also be used to estimate the regression coefficients in the individual dRUM representation of the binomial logit model, i.e. using binary observations as input. For this purpose, add a column in the data set next to the binary response variable, containing the repetition parameter \code{Ni = 1} for each binary observation.
